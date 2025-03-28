@@ -1,19 +1,4 @@
-
-
-# lista=[100]
-# x=90
-# escalar=100
-# tupla=(100,)
-# print(type(lista))
-# print(type(tupla))
-# lista.append(12)
-# tupla.append(100)#esta mal
-# t=(1,2)
-# print(type(t))
-# print(t)
-# t=t+(10,)
-# print(t)
-#mayor
+#listas
 import random
 def llenarLista(cantidad):
      lista=[]
@@ -87,4 +72,50 @@ print(f"la suma de la lista es {sumaLista(lista1)}")
 print(f"El total de primos de la lista es {contarPrimos(lista1)}")
 
 
+#tuplas
+import random
+def crearTupla():
+ tupla=()
+ cantidad=random.randint(5,15)
+ for i in range(cantidad):
+    tupla+=(random.randint(1,100), )
+ return tupla
+tupla2=crearTupla()
+print(tupla2)   
 
+
+
+def sumaTupla(tupla):
+     suma=0
+     for num in tupla:
+         suma = suma + num
+     return suma
+
+print(sumaTupla(tupla2))
+
+def meanTupla(tt):
+   return sumaTupla(tt)/len(tt)
+
+print(meanTupla(tupla2))
+
+def mayorTupla(t):
+    
+    mayor1=0
+    
+    for m in t:
+        if m>mayor1:
+            mayor1=m
+         
+    return mayor1   
+
+def menorTupla(ttt):
+    
+    menor1=100
+    
+    for m in ttt:
+        if m<menor1:
+           menor1=m
+    return menor1 
+
+print(f"el mayor es {mayorTupla(tupla2)}")
+print(f"el menor es {menorTupla(tupla2)}")
