@@ -89,3 +89,20 @@ for v in vendedores:
 
 print(f"el mayor es{max(mayores)}")    
 print(v["nombre"])
+
+menores = float('inf')
+vendedormenor= None
+productomenor = None
+
+for v in vendedores:
+    cont = 0
+    for precio in v['precio']:
+        if precio < menores:
+            menores = precio
+            vendedormenor = v['nombre']
+            productomenor = v['productos'][cont]
+        cont+= 1
+
+print(f"El producto más barato es {productomenor}")
+print(f"El vendedor es {vendedormenor}")
+print(f"El valor es {menores}")
